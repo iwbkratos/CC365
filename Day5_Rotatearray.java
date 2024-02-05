@@ -6,7 +6,7 @@ public class Day5_Rotatearray {
 
 	static Scanner scn=new Scanner(System.in);
 	
-	public static int [] leftRotation(int arr[])
+	public static int [] rightRotation(int arr[])
 	{
 		System.out.println("Enter no of rotations : ");
 		int noofRotation=scn.nextInt();
@@ -14,7 +14,7 @@ public class Day5_Rotatearray {
 		{
     //	store the first element of the array in a temp
 			int temp=arr[0];
-    //Iterate from the starting position replace the next position value in the curent position(left rotation)	
+    //Iterate from the starting position replace the next position value in the curent position(right rotation)	
 			for(int i=0;i<arr.length-1;i++)
 			{
 				arr[i]=arr[i+1];
@@ -25,7 +25,7 @@ public class Day5_Rotatearray {
 		}
 		return arr;
 	}
-	public static int [] rightRotation(int[] arr)
+	public static int [] leftRotation(int[] arr)
 	{
 		System.out.println("Enter no of rotations : ");
 		int noofRotation=scn.nextInt();
@@ -33,7 +33,7 @@ public class Day5_Rotatearray {
 		{
     //	store the last element of the array in a temp
 			int temp=arr[arr.length-1];
-    //	Iterate from ending position ,replace the previous position value in the curent position(right rotation)	
+    //	Iterate from ending position ,replace the previous position value in the curent position(left rotation)	
 			for(int i=arr.length-1;i>0;i--)
 			{
 				arr[i]=arr[i-1];
